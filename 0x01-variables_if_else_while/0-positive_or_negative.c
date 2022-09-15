@@ -1,15 +1,25 @@
+#include <stdlib.h>
+#include <time.h>
 #include <stdio.h>
 
-int main () {
-	int n = rand();
+/**
+ * main print if the integer positive, negative or zero
+ */
+
+int main (void)
+{
+	int n;
+       	
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
 	if (n > 0){
-		printf("is positive");
+		printf("%i is positive\n",n);
 	}
 	if (n == 0){
-		printf("is zero");
+		printf("%i is zero",n);
 	}
 	else{
-		printf("is negative"\n);
+		printf("%i is negative\n",n);
 	}
 	return 0;
 }
